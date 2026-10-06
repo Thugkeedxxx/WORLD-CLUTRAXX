@@ -2,14 +2,14 @@
   "siteName": "WORLD CLUTRA888",
 
   "music": {
-    "spotify": "",
-    "tidal": "",
-    "amazonMusic": "",
-    "audiomack": "",
+    "spotify": "https://open.spotify.com/track/2hNn3Vdkd0tlvLmiWOMIyJ?si=rSNEo_hrTpCrCftIRA3uLg&utm_source=copy-link",
+    "tidal": "https://tidal.com/track/540899755/u",
+    "amazonMusic": "https://amazon.com/music/player/albums/B0H7Z37FKG?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_DtCbmz9sGdBLzX6zSCPwsH3Gj",
+    "audiomack": "https://audiomack.com/thugkeed/song/6ac2abfcb1395?share-user-id=109305383",
     "soundcloud": ""
   },
 
   "community": {
-    "whatsapp": ""
+    "whatsapp": "https://whatsapp.com/channel/0029VbCUwwq9Gv7cCYBtBw1x"
   }
 }
