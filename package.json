@@ -1,18 +1,17 @@
 {
   "name": "address-xsx",
   "version": "3.0.0",
-  "description": "Address XSX - advanced configuration and file management platform",
+  "description": "Address XSX file management platform",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
-    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.2"
   }
 }
