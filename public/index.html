@@ -1,0 +1,3442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="theme-color"
+    content="#08090d"
+>
+
+<meta
+    name="description"
+    content="WORLD CLUTRA888 — configuration files, digital resources, community and THUGKEED music."
+>
+
+<title>WORLD CLUTRA888 — Digital Hub</title>
+
+<style>
+
+/* =========================================================
+   WORLD CLUTRA888
+   V3 PUBLIC HOMEPAGE
+========================================================= */
+
+:root {
+
+    --red: #ff2635;
+    --red2: #ff4653;
+    --dark-red: #a90e1b;
+
+    --black: #07080c;
+    --black2: #0d1017;
+    --black3: #141923;
+
+    --white: #ffffff;
+    --text: #f4f5f7;
+
+    --gray: #a4acba;
+    --gray2: #687180;
+
+    --green: #31e981;
+
+    --border:
+        rgba(255,255,255,.09);
+
+    --red-border:
+        rgba(255,38,53,.30);
+
+    --radius: 20px;
+
+    --shadow:
+        0 25px 80px rgba(0,0,0,.40);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--black);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.5;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+
+}
+
+
+button,
+input,
+select {
+
+    font:
+        inherit;
+
+}
+
+
+button {
+
+    cursor:
+        pointer;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        -10;
+
+    overflow:
+        hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,38,53,.18),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(255,38,53,.12),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #07080c,
+            #121620
+        );
+
+}
+
+
+.glow {
+
+    position:
+        absolute;
+
+    width:
+        420px;
+
+    height:
+        420px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--red);
+
+    filter:
+        blur(110px);
+
+    opacity:
+        .12;
+
+    animation:
+        floatGlow 13s
+        ease-in-out
+        infinite
+        alternate;
+
+}
+
+
+.glow.one {
+
+    left:
+        -180px;
+
+    top:
+        -150px;
+
+}
+
+
+.glow.two {
+
+    right:
+        -180px;
+
+    bottom:
+        -160px;
+
+    animation-delay:
+        3s;
+
+}
+
+
+@keyframes floatGlow {
+
+    from {
+
+        transform:
+            translate(
+                -20px,
+                -10px
+            )
+            scale(.9);
+
+    }
+
+    to {
+
+        transform:
+            translate(
+                70px,
+                50px
+            )
+            scale(1.15);
+
+    }
+
+}
+
+
+#particles {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .55;
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 30px)
+        );
+
+    margin:
+        auto;
+
+}
+
+
+.hidden {
+
+    display:
+        none !important;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    background:
+        rgba(6,8,12,.82);
+
+    backdrop-filter:
+        blur(20px);
+
+}
+
+
+.nav {
+
+    min-height:
+        74px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    font-size:
+        16px;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.6px;
+
+}
+
+
+.brand-icon {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--dark-red)
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,38,53,.30);
+
+    font-size:
+        20px;
+
+}
+
+
+.brand-red {
+
+    color:
+        var(--red);
+
+}
+
+
+.nav-links {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+}
+
+
+.nav-links a {
+
+    padding:
+        9px 12px;
+
+    border-radius:
+        9px;
+
+    color:
+        #b7beca;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    transition:
+        .2s;
+
+}
+
+
+.nav-links a:hover {
+
+    color:
+        white;
+
+    background:
+        rgba(255,255,255,.05);
+
+}
+
+
+.admin-link {
+
+    color:
+        var(--red) !important;
+
+    border:
+        1px solid
+        var(--red-border);
+
+    background:
+        rgba(255,38,53,.08);
+
+}
+
+
+.admin-link:hover {
+
+    background:
+        var(--red) !important;
+
+    color:
+        white !important;
+
+}
+
+
+.menu {
+
+    display:
+        none;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-size:
+        28px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height:
+        680px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+}
+
+
+.hero-content {
+
+    padding:
+        95px 0;
+
+    max-width:
+        900px;
+
+}
+
+
+.badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid
+        var(--red-border);
+
+    border-radius:
+        100px;
+
+    color:
+        #ff7b84;
+
+    background:
+        rgba(255,38,53,.07);
+
+    font-size:
+        11px;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.pulse {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 15px
+        rgba(49,233,129,.7);
+
+    animation:
+        pulse 1.5s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    50% {
+
+        opacity:
+            .45;
+
+        transform:
+            scale(.65);
+
+    }
+
+}
+
+
+.hero h1 {
+
+    margin-top:
+        27px;
+
+    font-size:
+        clamp(
+            58px,
+            10vw,
+            112px
+        );
+
+    line-height:
+        .86;
+
+    letter-spacing:
+        -7px;
+
+}
+
+
+.hero h1 span {
+
+    display:
+        block;
+
+    color:
+        var(--red);
+
+}
+
+
+.hero-description {
+
+    max-width:
+        720px;
+
+    margin-top:
+        28px;
+
+    color:
+        var(--gray);
+
+    font-size:
+        18px;
+
+}
+
+
+.hero-actions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        35px;
+
+}
+
+
+.btn {
+
+    min-height:
+        50px;
+
+    padding:
+        0 22px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    border-radius:
+        12px;
+
+    border:
+        1px solid
+        transparent;
+
+    font-size:
+        13px;
+
+    font-weight:
+        950;
+
+    transition:
+        .2s;
+
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--dark-red)
+        );
+
+    color:
+        white;
+
+    box-shadow:
+        0 13px 35px
+        rgba(255,38,53,.23);
+
+}
+
+
+.btn-outline {
+
+    border-color:
+        var(--border);
+
+    background:
+        rgba(255,255,255,.04);
+
+}
+
+
+.btn-admin {
+
+    border-color:
+        rgba(255,38,53,.35);
+
+    color:
+        #ff6973;
+
+    background:
+        rgba(255,38,53,.07);
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+
+    max-width:
+        760px;
+
+    margin-top:
+        55px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter:
+        blur(15px);
+
+    overflow:
+        hidden;
+
+}
+
+
+.stat {
+
+    padding:
+        22px;
+
+    border-right:
+        1px solid
+        var(--border);
+
+}
+
+
+.stat:last-child {
+
+    border-right:
+        0;
+
+}
+
+
+.stat strong {
+
+    display:
+        block;
+
+    font-size:
+        26px;
+
+}
+
+
+.stat span {
+
+    color:
+        var(--gray2);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+
+    padding:
+        95px 0;
+
+}
+
+
+.section-head {
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.kicker {
+
+    color:
+        var(--red);
+
+    font-size:
+        11px;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.section-head h2 {
+
+    margin-top:
+        6px;
+
+    font-size:
+        40px;
+
+    letter-spacing:
+        -2px;
+
+}
+
+
+.section-head p {
+
+    margin-top:
+        7px;
+
+    color:
+        var(--gray);
+
+}
+
+
+/* =========================================================
+   FILE CONTROLS
+========================================================= */
+
+.controls {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 230px;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.search {
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        0 16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255,255,255,.045);
+
+}
+
+
+.search span {
+
+    font-size:
+        20px;
+
+    color:
+        var(--gray);
+
+}
+
+
+.search input {
+
+    width:
+        100%;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+}
+
+
+.search input::placeholder {
+
+    color:
+        #687180;
+
+}
+
+
+.select {
+
+    height:
+        54px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        13px;
+
+    outline:
+        0;
+
+    background:
+        #10141c;
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   FILE GRID
+========================================================= */
+
+.file-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        17px;
+
+}
+
+
+.file-card {
+
+    position:
+        relative;
+
+    padding:
+        21px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.022)
+        );
+
+    backdrop-filter:
+        blur(14px);
+
+    transition:
+        .25s;
+
+}
+
+
+.file-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(255,38,53,.35);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.file-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255,38,53,.10);
+
+    font-size:
+        23px;
+
+}
+
+
+.file-category {
+
+    margin-top:
+        17px;
+
+    color:
+        var(--red);
+
+    font-size:
+        10px;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.file-card h3 {
+
+    margin-top:
+        6px;
+
+    font-size:
+        19px;
+
+    word-break:
+        break-word;
+
+}
+
+
+.file-description {
+
+    min-height:
+        40px;
+
+    margin-top:
+        7px;
+
+    color:
+        var(--gray);
+
+    font-size:
+        13px;
+
+}
+
+
+.file-meta {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        8px;
+
+    padding-top:
+        14px;
+
+    margin-top:
+        14px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    color:
+        var(--gray2);
+
+    font-size:
+        10px;
+
+}
+
+
+.download {
+
+    width:
+        100%;
+
+    height:
+        44px;
+
+    margin-top:
+        15px;
+
+    border:
+        0;
+
+    border-radius:
+        10px;
+
+    background:
+        white;
+
+    color:
+        #08090d;
+
+    font-weight:
+        950;
+
+    transition:
+        .2s;
+
+}
+
+
+.download:hover {
+
+    background:
+        var(--red);
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   LOADING / EMPTY
+========================================================= */
+
+.loading,
+.empty {
+
+    padding:
+        65px 20px;
+
+    text-align:
+        center;
+
+    color:
+        var(--gray);
+
+}
+
+
+.spinner {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    margin:
+        0 auto 15px;
+
+    border:
+        3px solid
+        rgba(255,255,255,.1);
+
+    border-top-color:
+        var(--red);
+
+    border-radius:
+        50%;
+
+    animation:
+        spin .8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.music-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(255,38,53,.04)
+        );
+
+}
+
+
+.music-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:
+        14px;
+
+}
+
+
+.music-card {
+
+    min-height:
+        190px;
+
+    padding:
+        20px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        17px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    transition:
+        .25s;
+
+}
+
+
+.music-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        var(--red-border);
+
+}
+
+
+.music-logo {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255,38,53,.10);
+
+    font-size:
+        19px;
+
+}
+
+
+.music-card h3 {
+
+    margin-top:
+        12px;
+
+    font-size:
+        16px;
+
+}
+
+
+.music-card p {
+
+    margin-top:
+        3px;
+
+    color:
+        var(--gray2);
+
+    font-size:
+        11px;
+
+}
+
+
+.music-link {
+
+    min-height:
+        38px;
+
+    margin-top:
+        15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        9px;
+
+    background:
+        white;
+
+    color:
+        #08090d;
+
+    font-size:
+        11px;
+
+    font-weight:
+        950;
+
+}
+
+
+.music-link:hover {
+
+    background:
+        var(--red);
+
+    color:
+        white;
+
+}
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.community {
+
+    padding-bottom:
+        110px;
+
+}
+
+
+.community-box {
+
+    padding:
+        45px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    border:
+        1px solid
+        var(--red-border);
+
+    border-radius:
+        25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,38,53,.10),
+            rgba(255,255,255,.035)
+        );
+
+}
+
+
+.community-box h2 {
+
+    font-size:
+        31px;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.community-box p {
+
+    margin-top:
+        7px;
+
+    color:
+        var(--gray);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    border-top:
+        1px solid
+        var(--border);
+
+    padding:
+        35px 0;
+
+    color:
+        var(--gray2);
+
+    font-size:
+        12px;
+
+}
+
+
+.footer-content {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+}
+
+
+.footer-brand {
+
+    color:
+        white;
+
+    font-weight:
+        950;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px) {
+
+    .file-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+    .music-grid {
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+@media(max-width:700px) {
+
+    .container {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .nav-links {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            68px;
+
+        left:
+            12px;
+
+        right:
+            12px;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        padding:
+            13px;
+
+        border:
+            1px solid
+            var(--border);
+
+        border-radius:
+            15px;
+
+        background:
+            #0b0e14;
+
+        box-shadow:
+            var(--shadow);
+
+    }
+
+
+    .nav-links.open {
+
+        display:
+            flex;
+
+    }
+
+
+    .nav-links a {
+
+        padding:
+            12px;
+
+    }
+
+
+    .menu {
+
+        display:
+            block;
+
+    }
+
+
+    .hero {
+
+        min-height:
+            auto;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(
+                52px,
+                16vw,
+                85px
+            );
+
+        letter-spacing:
+            -5px;
+
+    }
+
+
+    .hero-description {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .stat {
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            var(--border);
+
+    }
+
+
+    .stat:last-child {
+
+        border-bottom:
+            0;
+
+    }
+
+
+    .section {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .section-head h2 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .controls {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .file-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .music-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .community-box {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        padding:
+            30px;
+
+    }
+
+
+    .footer-content {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+}
+
+
+@media(max-width:400px) {
+
+    .music-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+====================================================== -->
+
+<div class="background">
+
+    <div class="glow one"></div>
+
+    <div class="glow two"></div>
+
+    <canvas id="particles"></canvas>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+<div class="container nav">
+
+<a
+    href="/"
+    class="brand"
+>
+
+    <div class="brand-icon">
+        W
+    </div>
+
+    WORLD
+    <span class="brand-red">
+        CLUTRA888
+    </span>
+
+</a>
+
+
+<nav
+    id="navLinks"
+    class="nav-links"
+>
+
+    <a href="#files">
+        📁 Files
+    </a>
+
+    <a href="#music">
+        🎵 Music
+    </a>
+
+    <a href="#community">
+        💬 Community
+    </a>
+
+    <a
+        href="/admin.html<a
+    href="/admin.html"
+    class="admin-link"
+>
+    🔐 Admin
+</a>
+
+</nav>
+
+
+<button
+    id="menuButton"
+    class="menu"
+    aria-label="Open menu"
+>
+
+    ☰
+
+</button>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+
+<div
+    id="platformBadge"
+    class="badge"
+>
+
+    <span class="pulse"></span>
+
+    PLATFORM ONLINE
+
+</div>
+
+
+<h1>
+
+    WORLD
+
+    <span>
+        CLUTRA888
+    </span>
+
+</h1>
+
+
+<p class="hero-description">
+
+    Your modern digital hub for
+    configuration files, downloads,
+    digital resources, community
+    updates and the latest
+    THUGKEED music.
+
+</p>
+
+
+<div class="hero-actions">
+
+    <a
+        href="#files"
+        class="btn btn-primary"
+    >
+
+        📁 Explore Files
+
+    </a>
+
+
+    <a
+        href="#music"
+        class="btn btn-outline"
+    >
+
+        🎵 Stream Music
+
+    </a>
+
+
+    <a
+        href="/admin.html"
+        class="btn btn-admin"
+    >
+
+        🔐 Admin Panel
+
+    </a>
+
+</div>
+
+
+<div class="stats">
+
+    <div class="stat">
+
+        <strong id="statFiles">
+            0
+        </strong>
+
+        <span>
+            Available Files
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong id="statDownloads">
+            0
+        </strong>
+
+        <span>
+            Total Downloads
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+            24/7
+        </strong>
+
+        <span>
+            Platform Access
+        </span>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FILE LIBRARY
+====================================================== -->
+
+<section
+    id="files"
+    class="section"
+>
+
+<div class="container">
+
+
+<div class="section-head">
+
+    <div class="kicker">
+        DIGITAL LIBRARY
+    </div>
+
+    <h2>
+        Configuration Files
+    </h2>
+
+    <p>
+        Browse, search and download
+        available resources.
+    </p>
+
+</div>
+
+
+<div class="controls">
+
+
+<div class="search">
+
+    <span>
+        🔎
+    </span>
+
+    <input
+        id="searchInput"
+        type="search"
+        autocomplete="off"
+        placeholder="Search files..."
+    >
+
+</div>
+
+
+<select
+    id="categorySelect"
+    class="select"
+>
+
+    <option value="all">
+        All Categories
+    </option>
+
+    <option value="SH Tunnel">
+        SH Tunnel
+    </option>
+
+    <option value="Dark Tunnel">
+        Dark Tunnel
+    </option>
+
+    <option value="HTTP Injector">
+        HTTP Injector
+    </option>
+
+    <option value="HTTP Custom">
+        HTTP Custom
+    </option>
+
+    <option value="Other">
+        Other
+    </option>
+
+</select>
+
+
+</div>
+
+
+<div
+    id="loading"
+    class="loading"
+>
+
+    <div class="spinner"></div>
+
+    Loading files...
+
+</div>
+
+
+<div
+    id="empty"
+    class="empty hidden"
+></div>
+
+
+<div
+    id="fileGrid"
+    class="file-grid"
+></div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSIC
+====================================================== -->
+
+<section
+    id="music"
+    class="section music-section"
+>
+
+<div class="container">
+
+
+<div class="section-head">
+
+    <div class="kicker">
+        THUGKEED MUSIC
+    </div>
+
+    <h2>
+        Stream The Music
+    </h2>
+
+    <p>
+        Follow and stream the latest
+        THUGKEED releases.
+    </p>
+
+</div>
+
+
+<div class="music-grid">
+
+
+<div class="music-card">
+
+    <div>
+
+        <div class="music-logo">
+            🎧
+        </div>
+
+        <h3>
+            Spotify
+        </h3>
+
+        <p>
+            Stream THUGKEED
+        </p>
+
+    </div>
+
+    <a
+        class="music-link"
+        href="https://open.spotify.com/"
+        target="_blank"
+        rel="noopener"
+    >
+        OPEN SPOTIFY
+    </a>
+
+</div>
+
+
+<div class="music-card">
+
+    <div>
+
+        <div class="music-logo">
+            🌊
+        </div>
+
+        <h3>
+            Audiomack
+        </h3>
+
+        <p>
+            Listen to releases
+        </p>
+
+    </div>
+
+    <a
+        class="music-link"
+        href="https://audiomack.com/"
+        target="_blank"
+        rel="noopener"
+    >
+        OPEN AUDIOMACK
+    </a>
+
+</div>
+
+
+<div class="music-card">
+
+    <div>
+
+        <div class="music-logo">
+            ▶️
+        </div>
+
+        <h3>
+            YouTube
+        </h3>
+
+        <p>
+            Watch videos
+        </p>
+
+    </div>
+
+    <a
+        class="music-link"
+        href="https://youtube.com/"
+        target="_blank"
+        rel="noopener"
+    >
+        OPEN YOUTUBE
+    </a>
+
+</div>
+
+
+<div class="music-card">
+
+    <div>
+
+        <div class="music-logo">
+            🎵
+        </div>
+
+        <h3>
+            TIDAL
+        </h3>
+
+        <p>
+            Stream THUGKEED
+        </p>
+
+    </div>
+
+    <a
+        class="music-link"
+        href="https://tidal.com/"
+        target="_blank"
+        rel="noopener"
+    >
+        OPEN TIDAL
+    </a>
+
+</div>
+
+
+<div class="music-card">
+
+    <div>
+
+        <div class="music-logo">
+            📡
+        </div>
+
+        <h3>
+            BandLab
+        </h3>
+
+        <p>
+            Follow the artist
+        </p>
+
+    </div>
+
+    <a
+        class="music-link"
+        href="https://www.bandlab.com/thugkeed_sa"
+        target="_blank"
+        rel="noopener"
+    >
+        OPEN BANDLAB
+    </a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     COMMUNITY
+====================================================== -->
+
+<section
+    id="community"
+    class="community"
+>
+
+<div class="container">
+
+
+<div class="community-box">
+
+<div>
+
+    <div class="kicker">
+        WORLD CLUTRA888 COMMUNITY
+    </div>
+
+    <h2>
+        Stay Connected.
+    </h2>
+
+    <p>
+        Get new files, updates,
+        releases and announcements.
+    </p>
+
+</div>
+
+
+<a
+    id="communityButton"
+    href="#"
+    class="btn btn-primary"
+    target="_blank"
+    rel="noopener"
+>
+
+    💬 Join Community
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+<div class="container footer-content">
+
+    <div>
+
+        <div class="footer-brand">
+            WORLD CLUTRA888
+        </div>
+
+        <div>
+            Digital Files • Community • Music
+        </div>
+
+    </div>
+
+
+    <div>
+
+        ©
+        <span id="year"></span>
+        WORLD CLUTRA888
+
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const fileGrid =
+    document.getElementById(
+        "fileGrid"
+    );
+
+const loading =
+    document.getElementById(
+        "loading"
+    );
+
+const empty =
+    document.getElementById(
+        "empty"
+    );
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+const categorySelect =
+    document.getElementById(
+        "categorySelect"
+    );
+
+const statFiles =
+    document.getElementById(
+        "statFiles"
+    );
+
+const statDownloads =
+    document.getElementById(
+        "statDownloads"
+    );
+
+const menuButton =
+    document.getElementById(
+        "menuButton"
+    );
+
+const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+const platformBadge =
+    document.getElementById(
+        "platformBadge"
+    );
+
+const communityButton =
+    document.getElementById(
+        "communityButton"
+    );
+
+const year =
+    document.getElementById(
+        "year"
+    );
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+year.textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.toggle(
+            "open"
+        );
+
+    }
+);
+
+
+document
+    .querySelectorAll(
+        "#navLinks a"
+    )
+    .forEach(
+        link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    navLinks.classList.remove(
+                        "open"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(
+    value
+) {
+
+    return String(
+        value ?? ""
+    )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    );
+
+}
+
+
+/* =========================================================
+   FILE ICON
+========================================================= */
+
+function getFileIcon(
+    category
+) {
+
+    const value =
+        String(
+            category || ""
+        ).toLowerCase();
+
+
+    if (
+        value.includes("http")
+    ) {
+
+        return "🌐";
+
+    }
+
+
+    if (
+        value.includes("tunnel")
+    ) {
+
+        return "🚇";
+
+    }
+
+
+    if (
+        value.includes("config")
+    ) {
+
+        return "⚙️";
+
+    }
+
+
+    return "📁";
+
+}
+
+
+/* =========================================================
+   FORMAT FILE SIZE
+========================================================= */
+
+function formatSize(
+    bytes
+) {
+
+    const size =
+        Number(
+            bytes || 0
+        );
+
+
+    if (!size) {
+
+        return "Unknown size";
+
+    }
+
+
+    const units = [
+        "B",
+        "KB",
+        "MB",
+        "GB"
+    ];
+
+
+    let value =
+        size;
+
+    let index =
+        0;
+
+
+    while (
+        value >= 1024 &&
+        index <
+        units.length - 1
+    ) {
+
+        value /=
+            1024;
+
+        index++;
+
+    }
+
+
+    return (
+        value.toFixed(
+            index === 0 ||
+            value >= 10
+                ? 0
+                : 1
+        )
+        +
+        " "
+        +
+        units[index]
+    );
+
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatDate(
+    value
+) {
+
+    if (!value) {
+
+        return "Recently";
+
+    }
+
+
+    try {
+
+        return new Date(
+            value
+        ).toLocaleDateString(
+            "en-ZA",
+            {
+                day:
+                    "2-digit",
+
+                month:
+                    "short",
+
+                year:
+                    "numeric"
+            }
+        );
+
+    } catch {
+
+        return "Recently";
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD FILES
+========================================================= */
+
+async function loadFiles() {
+
+    loading.classList.remove(
+        "hidden"
+    );
+
+    empty.classList.add(
+        "hidden"
+    );
+
+    fileGrid.innerHTML =
+        "";
+
+
+    const params =
+        new URLSearchParams();
+
+
+    const search =
+        searchInput.value.trim();
+
+
+    const category =
+        categorySelect.value;
+
+
+    if (search) {
+
+        params.set(
+            "search",
+            search
+        );
+
+    }
+
+
+    if (
+        category &&
+        category !== "all"
+    ) {
+
+        params.set(
+            "category",
+            category
+        );
+
+    }
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/files?"
+                +
+                params.toString(),
+                {
+                    cache:
+                        "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Files request failed"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        const files =
+            Array.isArray(
+                data.files
+            )
+                ? data.files
+                : [];
+
+
+        loading.classList.add(
+            "hidden"
+        );
+
+
+        updateStats(
+            files
+        );
+
+
+        if (!files.length) {
+
+            showEmpty();
+
+            return;
+
+        }
+
+
+        fileGrid.innerHTML =
+            files
+                .map(
+                    createFileCard
+                )
+                .join("");
+
+
+    } catch (error) {
+
+        console.error(
+            error
+        );
+
+
+        loading.classList.add(
+            "hidden"
+        );
+
+
+        empty.innerHTML = `
+
+            <div style="
+                font-size:45px;
+                margin-bottom:12px;
+            ">
+                ⚠️
+            </div>
+
+            <h3 style="
+                color:white;
+                margin-bottom:8px;
+            ">
+                Library unavailable
+            </h3>
+
+            <p>
+                We couldn't connect to
+                the file library.
+            </p>
+
+            <button
+                class="btn btn-primary"
+                style="margin-top:18px"
+                onclick="loadFiles()"
+            >
+                🔄 Try Again
+            </button>
+
+        `;
+
+
+        empty.classList.remove(
+            "hidden"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+function showEmpty() {
+
+    empty.innerHTML = `
+
+        <div style="
+            font-size:45px;
+            margin-bottom:12px;
+        ">
+            📂
+        </div>
+
+        <h3 style="
+            color:white;
+            margin-bottom:8px;
+        ">
+            No files found
+        </h3>
+
+        <p>
+            There are currently no files
+            matching your search.
+        </p>
+
+        <button
+            class="btn btn-primary"
+            style="margin-top:18px"
+            onclick="clearSearch()"
+        >
+            Reset Search
+        </button>
+
+    `;
+
+
+    empty.classList.remove(
+        "hidden"
+    );
+
+}
+
+
+/* =========================================================
+   CREATE FILE CARD
+========================================================= */
+
+function createFileCard(
+    file
+) {
+
+    const id =
+        encodeURIComponent(
+            file.id
+        );
+
+
+    const name =
+        escapeHTML(
+            file.name ||
+            file.originalName ||
+            "Unnamed File"
+        );
+
+
+    const category =
+        escapeHTML(
+            file.category ||
+            "Other"
+        );
+
+
+    const description =
+        escapeHTML(
+            file.description ||
+            "Configuration file available for download."
+        );
+
+
+    const size =
+        formatSize(
+            file.size
+        );
+
+
+    const downloads =
+        Number(
+            file.downloads || 0
+        );
+
+
+    return `
+
+        <article
+            class="file-card"
+        >
+
+            <div class="file-icon">
+
+                ${getFileIcon(
+                    category
+                )}
+
+            </div>
+
+
+            <div class="file-category">
+
+                ${category}
+
+            </div>
+
+
+            <h3>
+
+                ${name}
+
+            </h3>
+
+
+            <p class="file-description">
+
+                ${description}
+
+            </p>
+
+
+            <div class="file-meta">
+
+                <span>
+                    📦 ${size}
+                </span>
+
+                <span>
+                    ⬇️ ${downloads}
+                </span>
+
+            </div>
+
+
+            <div class="file-meta">
+
+                <span>
+                    📅
+                    ${formatDate(
+                        file.createdAt
+                    )}
+                </span>
+
+                <span>
+                    WORLD CLUTRA888
+                </span>
+
+            </div>
+
+
+            <button
+                class="download"
+                onclick="
+                    downloadFile('${id}')
+                "
+            >
+
+                ⬇ Download File
+
+            </button>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD FILE
+========================================================= */
+
+function downloadFile(
+    id
+) {
+
+    if (!id) {
+
+        return;
+
+    }
+
+
+    window.location.href =
+        "/api/download/"
+        +
+        id;
+
+}
+
+
+/* =========================================================
+   CLEAR SEARCH
+========================================================= */
+
+function clearSearch() {
+
+    searchInput.value =
+        "";
+
+    categorySelect.value =
+        "all";
+
+    loadFiles();
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+let searchTimer;
+
+
+searchInput.addEventListener(
+    "input",
+    () => {
+
+        clearTimeout(
+            searchTimer
+        );
+
+
+        searchTimer =
+            setTimeout(
+                loadFiles,
+                250
+            );
+
+    }
+);
+
+
+categorySelect.addEventListener(
+    "change",
+    loadFiles
+);
+
+
+/* =========================================================
+   UPDATE STATS
+========================================================= */
+
+function updateStats(
+    files
+) {
+
+    statFiles.textContent =
+        files.length;
+
+
+    const downloads =
+        files.reduce(
+            (
+                total,
+                file
+            ) => {
+
+                return total +
+                    Number(
+                        file.downloads || 0
+                    );
+
+            },
+            0
+        );
+
+
+    statDownloads.textContent =
+        downloads;
+
+}
+
+
+/* =========================================================
+   PLATFORM HEALTH
+========================================================= */
+
+async function checkPlatform() {
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/health",
+                {
+                    cache:
+                        "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Offline"
+            );
+
+        }
+
+
+        platformBadge.innerHTML = `
+
+            <span class="pulse"></span>
+
+            PLATFORM ONLINE
+
+        `;
+
+    } catch {
+
+        platformBadge.innerHTML = `
+
+            <span
+                class="pulse"
+                style="
+                    background:#ff9f43;
+                    box-shadow:
+                    0 0 15px
+                    rgba(255,159,67,.6);
+                "
+            ></span>
+
+            PLATFORM CHECK FAILED
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD SETTINGS
+========================================================= */
+
+async function loadSettings() {
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/settings",
+                {
+                    cache:
+                        "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            return;
+
+        }
+
+
+        const settings =
+            await response.json();
+
+
+        const community =
+            settings.whatsapp ||
+            settings.whatsappChannel ||
+            settings.community ||
+            "";
+
+
+        if (
+            communityButton &&
+            community
+        ) {
+
+            communityButton.href =
+                community;
+
+        }
+
+    } catch {
+
+        /*
+         * Keep default button
+         * if settings aren't available.
+         */
+
+    }
+
+}
+
+
+/* =========================================================
+   
+   /* =========================================================
+   PARTICLE BACKGROUND
+========================================================= */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas ? canvas.getContext("2d") : null;
+
+let particles = [];
+let animationFrame = null;
+
+function resizeCanvas() {
+    if (!canvas || !ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    createParticles();
+}
+
+function createParticles() {
+    if (!canvas) return;
+
+    particles = [];
+
+    const count = Math.min(
+        55,
+        Math.floor(window.innerWidth / 15)
+    );
+
+    for (let i = 0; i < count; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            size: Math.random() * 1.8 + 0.5,
+            speed: Math.random() * 0.3 + 0.1,
+            opacity: Math.random() * 0.4 + 0.15
+        });
+    }
+}
+
+function animateParticles() {
+    if (!canvas || !ctx) return;
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    for (const particle of particles) {
+        particle.y -= particle.speed;
+
+        if (particle.y < 0) {
+            particle.y = canvas.height;
+            particle.x = Math.random() * canvas.width;
+        }
+
+        ctx.beginPath();
+
+        ctx.arc(
+            particle.x,
+            particle.y,
+            particle.size,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            `rgba(255,38,53,${particle.opacity})`;
+
+        ctx.fill();
+    }
+
+    animationFrame =
+        requestAnimationFrame(animateParticles);
+}
+
+if (canvas && ctx) {
+    resizeCanvas();
+    animateParticles();
+
+    window.addEventListener(
+        "resize",
+        resizeCanvas
+    );
+}
+
+
+/* =========================================================
+   INITIALIZE WORLD CLUTRA888
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof loadFiles === "function") {
+        loadFiles();
+    }
+
+    if (typeof checkPlatform === "function") {
+        checkPlatform();
+    }
+
+    if (typeof loadSettings === "function") {
+        loadSettings();
+    }
+
+});
+
+
+/* =========================================================
+   END OF SCRIPT
+========================================================= */
+</script>
+
+</body>
+</html>
