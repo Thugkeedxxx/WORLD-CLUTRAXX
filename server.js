@@ -425,3 +425,18 @@ function requireAdmin(
     next();
 
 }
+/* =========================================================
+   START SERVER
+========================================================= */
+
+app.listen(
+    PORT,
+    "0.0.0.0",
+    () => {
+
+        console.log(
+            `WORLD CLUTRA888 server running on port ${PORT}`
+        );
+
+    }
+);
